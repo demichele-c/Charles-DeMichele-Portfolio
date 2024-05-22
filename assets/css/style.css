@@ -105,16 +105,14 @@ main {
 .flow img {
     max-height: 200px;
     border-radius: 5px;
-
-}
-@media screen and (max-width: 768px) {
-    .flow img {
-        display: flex;
-        flex: wrap;
-        justify-content: center;
+    max-width: 275px;
+    padding: 0 0 20px 0;
+    @media screen and (max-width: 768px) {
+            display: flex;
+            justify-content: center; 
+            align-items: center
+            }
     }
-
-}
 
 .flow h2 {
     margin-bottom: 20px;
