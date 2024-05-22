@@ -94,7 +94,7 @@ main {
 }
 .flow {
     margin-bottom: 20px;
-    padding: 50px;
+    padding: 40px;
     min-height: 300px;
     font-family: var(--font-family);
     background-color: #3f3f3f;
