@@ -1,74 +1,159 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="./assets/css/style.css"/>
-    <title>Charles DeMichele</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles DeMichele | Software Developer</title>
+    <!-- Importing Google Font -->
+ 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Carrois Gothic', sans-serif;
+        }
+        /* Dark and Light Mode Styles */
+        body.light-mode {
+            background-color: white;
+            color: black;
+        }
+        body.light-mode header, 
+        body.light-mode section, 
+        body.light-mode footer {
+            background-color: #f3f4f6;
+        }
+        body.light-mode a {
+            color: #0c0c0c;
+        }
+    </style>
+    
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
 </head>
 
-<body>
-    <header class="container">
-        <h1><span class="name">Charles</span>DeMichele</h1>
+<body class="bg-gray-900 text-white">
+    <!-- Header Section -->
+      <!-- Header Section -->
+      <header class="container mx-auto p-6 flex justify-between items-center bg-gray-800">
+        <h1 class="text-4xl font-bold"><span class="text-teal-500">Charles</span> DeMichele</h1>
         <nav>
-            <ul>
-                <li>
-                    <a href="#about-me">About <span class="name"> Me</span></a>
-                </li>
-                <li>
-                    <a href="#work">Work</a>
-                </li>
-                <li>
-                    <a href="#contact-me">Contact <span class="name"> Me</span></a>
-                </li>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="#about-me" class="hover:text-teal-400">About Me</a></li>
+                <li><a href="#work" class="hover:text-teal-400">Projects</a></li>
+                <li><a href="#contact-me" class="hover:text-teal-400">Contact</a></li>
             </ul>
         </nav>
+        <!-- Light/Dark Mode Toggle Button -->
+        <button onclick="toggleMode()" class="bg-teal-500 text-white py-2 px-4 rounded">Light/Dark</button>
     </header>
-    <div class="hero">
-        
-    </div>
-    <main>
-         <section id="about-me" class="flow">
-            <h2>About Me</h2>
-            <p>
-               I am a commercial diver turned software developer. I am currently enrolled in Univeristy of Central Florida's Full Stack Coding Bootcamp.
-            </p>
-         </section>
-         <section id="work" class="flow">
-            <a href="https://demichele-c.github.io/Horiseon-Refactor-Code-Project/">
-                <img src="./assets/images/Horiseon.jpg" alt="A picture of people around a table at a meeting." class="float-right"/>
-            </a>
-            <h2>Work</h2>
-            <p>
-                I currently have experience in HTML,CSS and JavaScript. Click on picture for a link to my first completed project. It is a code refractor project with an empasis on alt attributes and semantic HTML flow.
-            </p>
-        </section>
-        
-         <section id="contact-me" class="flow">
-            <img src="./assets/images/chuck-computer.jpg" alt="A picture of Charles DeMichele on a computer" class="float-left" />
-            <h2>Contact</h2>
-            <p>
-              <h3>Charles DeMichele</h3>
-              <p></p><p></p>
-              <ul>
-                <li>Cell:<p></p><a id="email" href="tel:+1-609-346-4136">Call Me</a></li>
-                <li>
-                    email:<p></p><a id="email" href="mailto:demichele.charles@yahoo.com">Email Me</a>
 
-                </li>
-              </ul>
-            </p>
+    <!-- Hero Section -->
+    <div class="hero h-[36rem] bg-cover bg-center mb-8" style="background-image: url('./assets/images/chuck-the-diver.jpg');"></div>
+
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        <!-- About Me Section -->
+        <section id="about-me" class="bg-gray-800 p-8 rounded-lg mb-8">
+            <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+            <p class="text-lg">I'm currently enrolled in a Full Stack Coding Bootcamp at the University of Central Florida, aiming to become a software developer. With 16 years in the restaurant industry as a chef, manager, and owner/operator, I've honed leadership, management, and problem-solving skills. Running my own restaurant taught me resilience, innovation, and the importance of customer satisfaction.
+
+                In 2021, I transitioned to commercial diving, specializing in underwater construction. This role sharpened my technical skills, attention to detail, and ability to thrive under pressure.
+                
+                My diverse background fosters adaptability and a continuous learning mindset, driving my passion for technology. I am eager to apply my unique skills to software development, contributing to dynamic teams and solving complex problems.
+                
+                Let's connect if you're looking for a motivated, versatile individual ready to bring a fresh perspective to your team and make meaningful contributions in the tech industry.</p>
         </section>
-    </main>
-     
-    <footer>
-        <h4>Made with ❤️️ by Charles DeMichele</h4>
-        <p>
-            &copy; 2024 DeMicheleWebsiteSolutions
+
+        <!-- Projects Section -->
+        <section id="work" class="bg-gray-800 p-8 rounded-lg mb-8">
+            <h2 class="text-3xl font-semibold mb-4">My Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <a href="https://dev-blog-je23.onrender.com/" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
+                    <img src="assets\images\Dev-Blog.png" alt="Developer Blog Website" class="mb-4 rounded-lg">
+                    <p>DevBlog</p>
+                </a>
+                <a href="https://www.youtube.com/watch?v=r_HlHH-Ams8" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
+                    <img src="assets\images\ThoughtLink-Api.png" alt="Insomnia Testing a api application" class="mb-4 rounded-lg">
+                    <p>Social Network API</p>
+                </a>
+                <a href="https://rich-strain.github.io/cocktail-search/" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
+                    <img src="assets\images\mix-it.png" alt="A coctail assistant application" class="mb-4 rounded-lg">
+                    <p>Mix-It!</p>
+                </a>
+                <a href="https://drive.google.com/file/d/13vMsRiy04XIg2wh5PnVb1ZmYQsoFXyDb/view" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
+                    <img src="assets\images\Employee-Tracker.png" alt="A application that tracks employee data across a company" class="mb-4 rounded-lg">
+                    <p>Employee Tracker</p>
+                </a>
+                <a href="https://github.com/demichele-c/DreamNet" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
+                    <img src="assets\images\DreamNet.png" alt="A github page with code for DreamNet a AI dream interpreter" class="mb-4 rounded-lg">
+                    <p>DreamNet</p>
+                </a>
+                <a href="https://demichele-c.github.io/Weather-Dashboard/" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
+                    <img src="assets\images\weather-Dashboard.png" alt="A dashboard that gives weather for a requested city" class="mb-4 rounded-lg">
+                    <p>Weather Dashboard</p>
+                </a>
+                <a href="https://github.com/demichele-c/Note-Taker" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
+                    <img src="assets\images\note-taker.png" alt="A note taking app" class="mb-4 rounded-lg">
+                    <p>Note Taker</p>
+                </a>
+            </a>
+            <a href="https://demichele-c.github.io/Task-Board/" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
+                <img src="assets\images\Task-Board.png" alt="A note taking app" class="mb-4 rounded-lg">
+                <p>Task Board</p>
+            </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+      <!-- Include Font Awesome -->
+
+
+      <section id="contact-me" class="bg-gray-800 p-8 rounded-lg">
+        <!-- Center the heading -->
+        <h2 class="text-3xl font-semibold mb-4 text-white text-center">Contact Me</h2>
+        
+        <!-- Center the name -->
+        <p class="text-white text-center"><strong>Charles DeMichele</strong></p>
+        
+        <!-- Make image smaller with max width -->
+        <img src="assets/images/chuck-computer.jpg" alt="A dashboard that gives weather for a requested city" class="mb-4 rounded-lg w-48 mx-auto">
+        
+        <p class="text-center">
+            <!-- Phone icon -->
+            <a href="tel:+1-609-346-4136" class="text-teal-500 hover:text-teal-300 mx-2">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+            
+            <!-- Email icon -->
+            <a href="mailto:demichele.charles@gmail.com" class="text-teal-500 hover:text-teal-300 mx-2">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            <!-- LinkedIn icon -->
+            <a href="https://www.linkedin.com/in/charles-demichele-601366313/" class="text-teal-500 hover:text-teal-300 mx-2">
+                <i class="fab fa-linkedin"></i>
+            </a>
         </p>
+    </section>
+    
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-center py-6">
+        <p>Made with ❤️ by Charles DeMichele</p>
+        <p>&copy; 2024 DeMicheleWebsiteSolutions</p>
     </footer>
 </body>
-
 </html>
