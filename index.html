@@ -32,6 +32,17 @@
         body.light-mode a {
             color: #0c0c0c;
         }
+        body.light-mode #work a {
+            background-color: #d3d3d3;
+        }
+        body.light-mode #about-me, 
+        body.light-mode #work, 
+        body.light-mode #contact-me {
+            color: black;
+        }
+        body.dark-mode #contact-me{
+            color:#d3d3d3
+        }
     </style>
     
     <script>
@@ -43,11 +54,10 @@
 
 <body class="bg-gray-900 text-white">
     <!-- Header Section -->
-      <!-- Header Section -->
-      <header class="container mx-auto p-6 flex justify-between items-center bg-gray-800">
-        <h1 class="text-4xl font-bold"><span class="text-teal-500">Charles</span> DeMichele</h1>
-        <nav>
-            <ul class="flex space-x-6 text-lg">
+    <header class="container mx-auto p-6 flex flex-col sm:flex-row justify-between items-center bg-gray-800">
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-0"><span class="text-teal-500">Charles</span> DeMichele</h1>
+        <nav class="mb-4 sm:mb-0">
+            <ul class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 text-lg">
                 <li><a href="#about-me" class="hover:text-teal-400">About Me</a></li>
                 <li><a href="#work" class="hover:text-teal-400">Projects</a></li>
                 <li><a href="#contact-me" class="hover:text-teal-400">Contact</a></li>
@@ -58,8 +68,7 @@
     </header>
 
     <!-- Hero Section -->
-    <div class="hero h-[36rem] bg-cover bg-center mb-8" style="background-image: url('./assets/images/chuck-the-diver.jpg');"></div>
-
+    <div class="hero h-72 sm:h-[36rem] bg-cover bg-center mb-8" style="background-image: url('./assets/images/chuck-the-diver.jpg');"></div>
 
     <!-- Main Content -->
     <main class="container mx-auto p-6">
@@ -78,76 +87,59 @@
         <!-- Projects Section -->
         <section id="work" class="bg-gray-800 p-8 rounded-lg mb-8">
             <h2 class="text-3xl font-semibold mb-4">My Projects</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <a href="https://dev-blog-je23.onrender.com/" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                    <img src="assets\images\Dev-Blog.png" alt="Developer Blog Website" class="mb-4 rounded-lg">
+                    <img src="assets/images/Dev-Blog.png" alt="Developer Blog Website" class="mb-4 rounded-lg">
                     <p>DevBlog</p>
                 </a>
                 <a href="https://www.youtube.com/watch?v=r_HlHH-Ams8" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                    <img src="assets\images\ThoughtLink-Api.png" alt="Insomnia Testing a api application" class="mb-4 rounded-lg">
+                    <img src="assets/images/ThoughtLink-Api.png" alt="Insomnia Testing a api application" class="mb-4 rounded-lg">
                     <p>Social Network API</p>
                 </a>
                 <a href="https://rich-strain.github.io/cocktail-search/" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                    <img src="assets\images\mix-it.png" alt="A coctail assistant application" class="mb-4 rounded-lg">
+                    <img src="assets/images/mix-it.png" alt="A coctail assistant application" class="mb-4 rounded-lg">
                     <p>Mix-It!</p>
                 </a>
                 <a href="https://drive.google.com/file/d/13vMsRiy04XIg2wh5PnVb1ZmYQsoFXyDb/view" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                    <img src="assets\images\Employee-Tracker.png" alt="A application that tracks employee data across a company" class="mb-4 rounded-lg">
+                    <img src="assets/images/Employee-Tracker.png" alt="A application that tracks employee data across a company" class="mb-4 rounded-lg">
                     <p>Employee Tracker</p>
                 </a>
                 <a href="https://github.com/demichele-c/DreamNet" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                    <img src="assets\images\DreamNet.png" alt="A github page with code for DreamNet a AI dream interpreter" class="mb-4 rounded-lg">
+                    <img src="assets/images/DreamNet.png" alt="A github page with code for DreamNet a AI dream interpreter" class="mb-4 rounded-lg">
                     <p>DreamNet</p>
                 </a>
                 <a href="https://demichele-c.github.io/Weather-Dashboard/" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                    <img src="assets\images\weather-Dashboard.png" alt="A dashboard that gives weather for a requested city" class="mb-4 rounded-lg">
+                    <img src="assets/images/weather-Dashboard.png" alt="A dashboard that gives weather for a requested city" class="mb-4 rounded-lg">
                     <p>Weather Dashboard</p>
                 </a>
                 <a href="https://github.com/demichele-c/Note-Taker" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                    <img src="assets\images\note-taker.png" alt="A note taking app" class="mb-4 rounded-lg">
+                    <img src="assets/images/note-taker.png" alt="A note taking app" class="mb-4 rounded-lg">
                     <p>Note Taker</p>
                 </a>
-            </a>
-            <a href="https://demichele-c.github.io/Task-Board/" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
-                <img src="assets\images\Task-Board.png" alt="A note taking app" class="mb-4 rounded-lg">
-                <p>Task Board</p>
-            </a>
+                <a href="https://demichele-c.github.io/Task-Board/" class="block bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition">
+                    <img src="assets/images/Task-Board.png" alt="A task management app" class="mb-4 rounded-lg">
+                    <p>Task Board</p>
+                </a>
             </div>
         </section>
 
         <!-- Contact Section -->
-      <!-- Include Font Awesome -->
-
-
-      <section id="contact-me" class="bg-gray-800 p-8 rounded-lg">
-        <!-- Center the heading -->
-        <h2 class="text-3xl font-semibold mb-4 text-white text-center">Contact Me</h2>
-        
-        <!-- Center the name -->
-        <p class="text-white text-center"><strong>Charles DeMichele</strong></p>
-        
-        <!-- Make image smaller with max width -->
-        <img src="assets/images/chuck-computer.jpg" alt="A dashboard that gives weather for a requested city" class="mb-4 rounded-lg w-48 mx-auto">
-        
-        <p class="text-center">
-            <!-- Phone icon -->
-            <a href="tel:+1-609-346-4136" class="text-teal-500 hover:text-teal-300 mx-2">
-                <i class="fas fa-phone-alt"></i>
-            </a>
-            
-            <!-- Email icon -->
-            <a href="mailto:demichele.charles@gmail.com" class="text-teal-500 hover:text-teal-300 mx-2">
-                <i class="fas fa-envelope"></i>
-            </a>
-            
-            <!-- LinkedIn icon -->
-            <a href="https://www.linkedin.com/in/charles-demichele-601366313/" class="text-teal-500 hover:text-teal-300 mx-2">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </p>
-    </section>
-    
-
+        <section id="contact-me" class="bg-gray-800 p-8 rounded-lg">
+            <h2 class="text-3xl font-semibold mb-4  text-center">Contact Me</h2>
+            <p class=" text-center"><strong>Charles DeMichele</strong></p>
+            <img src="assets/images/chuck-computer.jpg" alt="Charles DeMichele at a computer" class="mb-4 rounded-lg w-48 mx-auto">
+            <p class="text-center">
+                <a href="tel:+1-609-346-4136" class="text-teal-500 hover:text-teal-300 mx-2">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+                <a href="mailto:demichele.charles@gmail.com" class="text-teal-500 hover:text-teal-300 mx-2">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/charles-demichele-601366313/" class="text-teal-500 hover:text-teal-300 mx-2">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </p>
+        </section>
     </main>
 
     <!-- Footer Section -->
